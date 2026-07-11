@@ -1,0 +1,45 @@
+# PersuContraGraph 训练配置 - 第二阶段(cls)
+
+data:
+  data_dirs:
+    - "data/pcot_persu_data"
+    - "data/role_data"
+    - "data/emo_data"
+  train_files:
+    - "gpt-5-mini-2025-08-07_CoAID_train.csv"
+    - "gpt-5-mini-2025-08-07_ECTF_train.csv"
+  val_files:
+    - "gpt-5-mini-2025-08-07_CoAID_validation.csv"
+    - "gpt-5-mini-2025-08-07_ECTF_validation.csv"
+  test_files:
+    - "gpt-5-mini-2025-08-07_CoAID_test.csv"
+    - "gpt-5-mini-2025-08-07_ECTF_test.csv"
+    - "gpt-5-mini-2025-08-07_EUDisinfo_test.csv"
+    - "gpt-5-mini-2025-08-07_ISOTFakeNews_test.csv"
+    - "gpt-5-mini-2025-08-07_MultiDis_test.csv"
+  max_length: 512
+  batch_size: 128
+
+model:
+  encoder_name: "../weights/roberta-large"
+  pooling: "gated"
+  freeze_encoder: true
+  persu_hidden: 32
+  cls_hidden: 256
+  num_classes: 2
+  dropout: 0.32901791493317983
+  num_learnable_queries: 3
+  num_hetero_attention: 1
+
+train:
+  stage: "cls"
+  pretrained_path: "weights/extax_stage1_opt0_14.pth"
+  epochs: 50
+  learning_rate: 0.0009654400943128438
+  weight_decay: 0.00018147797517421754
+  patience: 3
+  device: "cuda:4"
+  seed: 42
+
+save:
+  save_path: "weights/extax_stage2_opt0_14.pth"

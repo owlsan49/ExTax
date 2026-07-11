@@ -1,9 +1,0 @@
-torch
-numpy
-pandas
-scikit-learn
-tqdm
-openai
-dotenv
-transformers
-wikipedia2vec

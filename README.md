@@ -1,6 +1,6 @@
 # ExTax: Explainable Disinformation Detection via Persuasion, Emotion, and Narrative Role Taxonomies
 
-This repository contains an anonymized implementation of **ExTax**, a two-stage framework for explainable disinformation detection. ExTax first aligns text representations with interpretable taxonomic signals, then uses the aligned representation for binary fake/real classification.
+This repository contains an implementation of **ExTax**, a two-stage framework for explainable disinformation detection. ExTax first aligns text representations with interpretable taxonomic signals, then uses the aligned representation for binary fake/real classification.
 
 The implementation is prepared for anonymous paper review. It intentionally does not include author names, affiliations, or non-anonymous project metadata.
 
@@ -211,4 +211,16 @@ For exact reproducibility, use the same dependency versions, GPU type, CUDA/cuDN
 
 ## Citation
 
-Citation information will be added after the anonymous review period.
+If you use this work, please cite:
+
+```bibtex
+@misc{luo2026extaxexplainabledisinformationdetection,
+      title={ExTax: Explainable Disinformation Detection via Persuasion, Emotion, and Narrative Role Taxonomies}, 
+      author={Shang Luo and Yingguang Yang and Zhenchen Sun and Yang Liu and Bin Chong and Jingru Chen and Yancheng Chen and Jiayu Liang and Kefu Xu and Hao Peng and Philip S. Yu},
+      year={2026},
+      eprint={2605.27045},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2605.27045}, 
+}
+```
